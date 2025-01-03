@@ -72,7 +72,7 @@ export default function Chat() {
           ))}
         </ul>
       </section>
-      <footer className="flex justify-between pt-0 pb-4 border-b w-full max-w-3xl mx-auto">
+      <footer className="flex justify-between pt-0 px-4 pb-4 border-b w-full max-w-3xl mx-auto">
         <div>{currentYear}&copy;All Rights Reserved</div>
         <div>
           Build by&nbsp; <span className="font-bold">Zitu Hoque</span>

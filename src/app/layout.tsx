@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,7 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon link */}
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-STZRBQ3RP0"
+        ></Script>
+        <Script id="google-analytics">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-STZRBQ3RP0');`}
+        </Script>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </head>
       <body
